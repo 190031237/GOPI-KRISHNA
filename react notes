@@ -1,0 +1,156 @@
+import React
+
+const App = React.createClass({
+    render() {
+        return (
+            <main className = "react-calculator">
+                <InputField/>
+                <TotalRecall/>
+                <ButtonSetNumber/>
+                <ButtonSetFunctions/>
+                <ButtonSetEquations/>
+            </main>
+        );
+    }
+});
+
+
+const Button = React.createClass({
+    _handleClick() {
+        let text = this.props.text,
+            cb = this.props.clickHandler();
+        if(cb) {
+            cb.call(null,text);
+        }
+    },
+    render() {
+        return (
+            <button className={this.props.klass} onClick={this._handleClick}>
+                <span className="title">{this.props.text}</span>
+            </button>
+        )
+    }
+});
+
+const InputField = React.createClass({
+
+});
+
+const TotalRecall = React.createClass({
+
+});
+const ContentEditable = React.createClass({
+
+});
+
+const ButtonSetEquations = React.createClass({
+
+});
+
+const ButtonSetFunctions = React.createClass({
+    render() {
+        return (
+            <section className = "button-set--functions">
+                <Buttton klass="long-text" text="area" clickHandler=></Buttton>
+            </section>
+        )
+    }
+});
+
+const ButtonSetNumber = React.createClass({
+
+});
+
+
+import React
+
+const ee = new EventEmitters()
+const App = React.createClass({
+    render() {
+        return (
+            <main className = "react-calculator">
+                <InputField/>
+                <TotalRecall/>
+                <ButtonSetNumber/>
+                <ButtonSetFunctions/>
+                <ButtonSetEquations/>
+            </main>
+        );
+    }
+});
+
+
+const Button = React.createClass({
+    _handleClick() {
+        let text = this.props.text,
+            cb = this.props.clickHandler();
+      
+        if(cb) {
+            cb.call(null,text);
+        }
+    },
+    render() {
+        return (
+            <button className={this.props.klass} 
+              onClick={this._handleClick}>
+                <span className="title">
+                  {this.props.text}</span>
+            </button>
+        )
+    }
+});
+
+const ContentEditable = React.createClass({
+  _handleClick() {
+    let cb = this.props.clickHandler();
+    
+    if(cb) {
+      cb.call(null,this)
+    }
+  },
+  render() {
+    <div className="editable-field"
+      contentEditable = {this.props.initEdit}
+      spellcheck={this.props.spellCheck}
+      onClick = {this._handleClick}>
+        
+        {this.props.text}
+      </div>
+  }
+  
+});
+
+const InputField = React.createClass({
+  
+});
+
+const TotalRecall = React.createClass({
+
+});
+
+
+const ButtonSetEquations = React.createClass({
+
+});
+
+const ButtonSetFunctions = React.createClass({
+    render() {
+        return (
+            <section className = "button-set--functions">
+                <Buttton klass="long-text" text="area" clickHandler={this._showMemoryBank}></Buttton>
+            </section>
+        )
+    }
+});
+
+const ButtonSetNumber = React.createClass({
+
+});
+
+
+
+
+
+
+
+
